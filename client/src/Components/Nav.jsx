@@ -1,5 +1,5 @@
 import React from 'react'
-import { Contact2Icon, HomeIcon, IdCard, User2 } from 'lucide-react'
+import { Contact2Icon, DownloadCloudIcon, DownloadIcon, HomeIcon, IdCard, User2 } from 'lucide-react'
 import { NavLink } from 'react-router-dom'
 
 const Nav = () => {
@@ -31,7 +31,7 @@ const Nav = () => {
         <div className='flex space-x-2'>
             {
                 navLinks.map((link)=>(
-                    <NavLink to={link.path} className='flex gap-1 text-sm'>
+                    <NavLink to={link.path} className='flex gap-1 text-sm hover:text-blue-500'>
                         <span>{link.icon}</span>
                         {link.name}
                     </NavLink>
@@ -39,8 +39,8 @@ const Nav = () => {
             }
         </div>
 
-        <button className='text-white bg-blue-600 px-2 py-1 rounded'>
-            Download Cv
+        <button className='text-white text-sm bg-primary px-2 flex gap-2 py-1 rounded'>
+           <DownloadIcon/> CV
         </button>
     </div>
   )
